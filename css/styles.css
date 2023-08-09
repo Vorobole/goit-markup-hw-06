@@ -395,6 +395,11 @@ img {
 }
 /* ===========================index-section5-customers============================ */
 
+.customers {
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding: 96px 0;
+}
 .customers-title {
   text-align: center;
   font-weight: 700;
@@ -404,18 +409,20 @@ img {
   color: #2e2f42;
   margin-bottom: 72px;
 }
-.customers {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
+
 .customers-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  gap: 72px 16px;
+  justify-content: center;
 }
 .customers-item {
-  width: 168px;
+  /* width: 168px; */
+  width: 190px;
   height: 88px;
-  width: calc((100% - 120px) / 6);
+  /* width: calc((100% - 120px) / 6); */
+  width: calc((100% - 32px) / 2);
 }
 .customers-link {
   width: 100%;
@@ -931,6 +938,18 @@ textarea:focus {
     background-color: #ffffff;
     width: calc((100% - 24px) / 2);
   }
+
+  /**
+   |============================
+   | Customers - section5
+   |============================
+  */
+
+  .customers-item {
+    max-width: 168px;
+    height: 88px;
+    width: calc((100% - 48px) / 3);
+  }
 }
 @media screen and (min-width: 1158px) {
   /**
@@ -1044,4 +1063,25 @@ textarea:focus {
   .team-item {
     width: calc((100% - 72px) / 4);
   }
+
+  /**
+   |============================
+   | Customers - section5
+   |============================
+  */
+
+  .customers {
+    padding: 120px 0;
+  }
+
+  .customers-list {
+    display: flex;
+    flex-wrap: unset;
+    gap: 24px;
+  }
+  .customers-item {
+    width: 168px;
+    height: 88px;
+    width: calc((100% - 120px) / 6);
+    
 }
