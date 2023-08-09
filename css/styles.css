@@ -262,12 +262,24 @@ img {
   margin-bottom: 8px; */
   display: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ============================index-section3=========================== */
 .doing {
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
   display: none;
 }
-.doing-title {
+/* .doing-title {
   color: var(--navyblue, #2e2f42);
   font-family: Roboto;
   font-size: 36px;
@@ -298,7 +310,7 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 /* ===========================index-section4-Our Team============================ */
 .team {
   background: var(--cloud, #f4f4fd);
@@ -909,6 +921,7 @@ textarea:focus {
 
   .container {
     max-width: 1158px;
+    width: 100%;
   }
 
   .hero {
@@ -970,6 +983,27 @@ textarea:focus {
   */
 
   .doing {
-    display: unset;
+    padding-bottom: 120px;
+    display: block;
+  }
+  .doing-title {
+    color: var(--navyblue, #2e2f42);
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+  }
+  .doing-list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+  }
+  .doing-item {
+    width: calc((100% - 48px) / 3);
   }
 }
