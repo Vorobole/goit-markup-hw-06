@@ -884,6 +884,7 @@ textarea:focus {
 
 @media screen and (min-width: 428px) {
 }
+
 @media screen and (min-width: 768px) {
   /**
    |============================
@@ -951,6 +952,7 @@ textarea:focus {
     width: calc((100% - 48px) / 3);
   }
 }
+
 @media screen and (min-width: 1158px) {
   /**
    |============================
@@ -1083,5 +1085,5 @@ textarea:focus {
     width: 168px;
     height: 88px;
     width: calc((100% - 120px) / 6);
-    
+  }
 }
