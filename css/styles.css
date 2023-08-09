@@ -212,7 +212,7 @@ img {
 
 /* ===========================index-section2======================== */
 .qualities {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .qualities-title {
   color: var(--navyblue, #2e2f42);
@@ -226,35 +226,41 @@ img {
 }
 .qualities-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 .qualities-list-item {
   width: calc((100% - 72px) / 4);
+  width: 100%;
+  max-width: 396px;
 }
 .qualities-item-title {
   color: var(--navyblue);
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 36px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.4px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 .qualities-item-text {
   color: var(--slate, #434455);
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 .qualities-icon-list {
-  border-radius: 4px;
+  /* border-radius: 4px;
   background-color: var(--cloud, #f4f4fd);
   height: 112px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 8px; */
+  display: none;
 }
 /* ============================index-section3=========================== */
 .doing {
@@ -856,25 +862,103 @@ textarea:focus {
 @media screen and (min-width: 428px) {
 }
 @media screen and (min-width: 768px) {
+  /**
+   |============================
+   | HERO - section1
+   |============================
+  */
+
   .container {
     max-width: 738px;
   }
+
   .hero {
     max-width: 768px;
     max-height: 436px;
   }
+  /**
+   |============================
+   | Qualities - section2
+   |============================
+  */
+
+  .qualities-list {
+    gap: 72px 24px;
+  }
+  .qualities-list-item {
+    width: calc((100% - 24px) / 2);
+    max-width: 356px;
+  }
+
+  .qualities-item-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    text-align: left;
+  }
 }
 @media screen and (min-width: 1158px) {
+  /**
+   |============================
+   | HERO - section1
+   |============================
+  */
+
   .container {
     max-width: 1158px;
   }
+
   .hero {
     max-width: 1440px;
     max-height: 600px;
     padding: 188px 0;
   }
+
   .hero-title {
     font-size: 56px;
     max-width: 496px;
+  }
+
+  /**
+   |============================
+   | Qualities - section2
+   |============================
+  */
+
+  .qualities {
+    padding: 120px 0;
+  }
+
+  .qualities-list {
+    gap: 24px;
+    flex-wrap: unset;
+  }
+  .qualities-list-item {
+    width: calc((100% - 72px) / 4);
+    max-width: 264px;
+  }
+
+  .qualities-item-title {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .qualities-icon-list {
+    display: unset;
+    border-radius: 4px;
+    background-color: var(--cloud, #f4f4fd);
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .qualities-item-text {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
