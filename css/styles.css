@@ -593,8 +593,13 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
-  margin-bottom: 16px;
+  /* display: inline-block; */
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+
+  /* margin-bottom: 16px; */
 }
 .footer-logo .span {
   color: #f4f4fd;
@@ -603,14 +608,18 @@ img {
   color: var(--cloud);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
+  /* max-width: 264px; */
+
+  margin: auto;
+  max-width: 268px;
+  margin-bottom: 72px;
 }
 .footer > .container {
-  display: flex;
-  align-items: baseline;
+  /* display: flex; */
+  /* align-items: baseline; */
 }
 .footer-left {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 
 .footer-socl-title {
@@ -620,9 +629,15 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white);
+
+  text-align: center;
 }
 .footer-icon-list {
   display: flex;
+
+  justify-content: center;
+  margin-bottom: 72px;
+
   gap: 16px;
 }
 .footer-icon-item {
@@ -649,23 +664,32 @@ img {
 
 .footer-subscribe-title {
   margin-bottom: 16px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   color: var(--white, #fff);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  text-align: center;
 }
 .footer-subscribe-form {
   display: flex;
-  margin-left: 80px;
-  width: 453px;
+
+  flex-wrap: wrap;
+  gap: 16px;
+
+  /* margin-left: 80px; */
+  /* width: 453px; */
   height: 80px;
-  gap: 24px;
+  /* gap: 24px; */
 }
 
 .footer-input-email {
-  width: 264px;
+  /* width: 264px; */
+
+  width: 398px;
+
   height: 40px;
   border-radius: 4px;
   border: 1px solid var(--white, #fff);
@@ -675,7 +699,7 @@ img {
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  margin-right: 24px;
+  /* margin-right: 24px; */
   padding-left: 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
@@ -685,6 +709,7 @@ img {
 
 .footer-subscribe-btn {
   display: flex;
+
   align-items: center;
   justify-content: center;
   font-family: "Roboto", sans-serif;
@@ -700,6 +725,8 @@ img {
   background: var(--iris, #4d5ae5);
   min-width: 165px;
   height: 40px;
+
+  margin: auto;
 }
 .footer-subscribe-icon {
   margin-left: 16px;
