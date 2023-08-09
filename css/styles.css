@@ -265,6 +265,7 @@ img {
 /* ============================index-section3=========================== */
 .doing {
   padding-bottom: 120px;
+  display: none;
 }
 .doing-title {
   color: var(--navyblue, #2e2f42);
@@ -960,5 +961,15 @@ textarea:focus {
   .qualities-item-text {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  /**
+   |============================
+   | Doing - section3
+   |============================
+  */
+
+  .doing {
+    display: unset;
   }
 }
