@@ -674,10 +674,10 @@ img {
   text-align: center;
 }
 .footer-subscribe-form {
-  display: flex;
+  /* display: flex;
 
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 16px; */
 
   /* margin-left: 80px; */
   /* width: 453px; */
@@ -688,7 +688,9 @@ img {
 .footer-input-email {
   /* width: 264px; */
 
-  width: 398px;
+  max-width: 398px;
+  width: 100%;
+  margin-bottom: 16px;
 
   height: 40px;
   border-radius: 4px;
@@ -1027,6 +1029,54 @@ textarea:focus {
   .direction-item-cards {
     width: calc((100% - 24px) / 2);
   }
+
+  /**
+   |============================
+   | Footer
+   |============================
+  */
+
+  .footer-logo {
+    margin-bottom: 16px;
+    justify-content: start;
+  }
+
+  .footer-text {
+    margin: 0;
+    margin-bottom: 72px;
+  }
+
+  .footer-socl-title {
+    text-align: left;
+  }
+  .footer-left-socl {
+    display: flex;
+    gap: 24px;
+    margin-left: 108px;
+  }
+  .footer-subscribe {
+  }
+  .footer-subscribe-title {
+    text-align: start;
+    margin-left: 108px;
+  }
+  .footer-subscribe-form {
+    display: flex;
+    margin-left: 108px;
+    gap: 16px;
+  }
+  .footer-subscribe-email {
+    width: 264px;
+  }
+
+  .footer-input-email {
+    width: 264px;
+
+    margin-bottom: 16px;
+  }
+  .footer-subscribe-btn {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1194,5 +1244,60 @@ textarea:focus {
   }
   .direction-item-cards {
     width: calc((100% - 48px) / 3);
+  }
+
+  /* ---------------------------------footer------------------------------- */
+  .footer-logo {
+    color: var(--iris, #4d5ae5);
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-text {
+    color: var(--cloud);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    width: 264px;
+    margin: 0;
+  }
+  .footer > .container {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer-left {
+    margin-right: 120px;
+  }
+
+  .footer-socl-title {
+    margin-bottom: 16px;
+  }
+  .footer-icon-list {
+    display: flex;
+    gap: 16px;
+  }
+
+  .footer-subscribe-title {
+    margin-left: 80px;
+  }
+  .footer-subscribe-form {
+    margin-left: 80px;
+    gap: 24px;
+  }
+
+  .footer-input-email {
+    margin-right: 24px;
+  }
+
+  .footer-left-socl {
+    margin: 0;
   }
 }
