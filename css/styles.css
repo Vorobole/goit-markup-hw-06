@@ -755,7 +755,10 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
+  /* width: 408px; */
+
+  width: 392px;
+
   min-height: 584px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1076,6 +1079,16 @@ textarea:focus {
   .footer-subscribe-btn {
     margin: 0;
   }
+
+  /**
+   |============================
+   | Modal
+   |============================
+  */
+
+  .window {
+    width: 408px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -1299,5 +1312,15 @@ textarea:focus {
   .footer-left-socl {
     margin: 0;
     gap: 0;
+  }
+
+  /**
+   |============================
+   | Modal
+   |============================
+  */
+
+  .window {
+    width: 408px;
   }
 }
