@@ -1054,8 +1054,7 @@ textarea:focus {
     gap: 24px;
     margin-left: 108px;
   }
-  .footer-subscribe {
-  }
+
   .footer-subscribe-title {
     text-align: start;
     margin-left: 108px;
@@ -1299,5 +1298,6 @@ textarea:focus {
 
   .footer-left-socl {
     margin: 0;
+    gap: 0;
   }
 }
