@@ -58,7 +58,7 @@ header {
 }
 .header-menu {
   display: flex;
-  gap: 40px;
+  /* gap: 40px; */
   justify-content: space-between;
 }
 img {
@@ -80,13 +80,29 @@ img {
 .logo-span {
   color: var(--navyblue, #2e2f42);
 }
-
+.menu-mob-button {
+  background-color: transparent;
+  border: none;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+}
+.menu-mob-icon {
+  fill: transparent;
+  stroke: #2e2f42;
+}
 .menu {
   display: flex;
   align-items: center;
+
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 0;
 }
 .menu-list {
-  display: flex;
+  /* display: flex; */
+
+  display: none;
+
   gap: 40px;
 }
 .menu-link {
@@ -128,7 +144,10 @@ img {
   color: var(--ocean, #404bbf);
 }
 .address-list {
-  display: flex;
+  /* display: flex; */
+
+  display: none;
+
   gap: 40px;
 }
 .address-link {
