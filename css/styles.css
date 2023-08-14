@@ -59,7 +59,7 @@ header {
 .header-menu {
   display: flex;
   /* gap: 40px; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 img {
   display: block;
@@ -80,6 +80,7 @@ img {
 .logo-span {
   color: var(--navyblue, #2e2f42);
 }
+
 .menu-mob-button {
   background-color: transparent;
   border: none;
@@ -96,6 +97,7 @@ img {
 
   justify-content: space-between;
   width: 100%;
+
   padding: 24px 0;
 }
 .menu-list {
@@ -185,7 +187,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .menu-mob-btn-close {
   /* position: absolute; */
   /* top: 24px; */
@@ -202,8 +207,6 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-mob-icon {
 }
@@ -235,6 +238,7 @@ img {
 .menu-mob-address-tel {
   color: var(--iris, #4d5ae5);
   font-size: 36px;
+  font-style: normal;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -244,6 +248,7 @@ img {
   color: var(--slate, #434455);
   font-family: Roboto;
   font-size: 20px;
+  font-style: normal;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -251,6 +256,7 @@ img {
 .menu-mob-icon-list {
   display: flex;
   gap: 56px;
+  margin-top: 48px;
 }
 
 /* ==============================index-section1-hero========================== */
@@ -1049,6 +1055,39 @@ textarea:focus {
 @media screen and (min-width: 768px) {
   /**
    |============================
+   | Header
+   |============================
+  */
+  .header-menu {
+    gap: 40px;
+  }
+  .logo {
+    margin-right: 120px;
+  }
+
+  .menu-mob {
+    display: none;
+  }
+  .menu-mob-button {
+    display: none;
+  }
+  .menu-list {
+    display: flex;
+  }
+  .address {
+    padding: 16px;
+  }
+  .address-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .address-link {
+    padding: 0;
+  }
+
+  /**
+   |============================
    | HERO - section1
    |============================
   */
@@ -1223,6 +1262,32 @@ textarea:focus {
 }
 
 @media screen and (min-width: 1158px) {
+  /**
+   |============================
+   | Header
+   |============================
+  */
+
+  .menu {
+    justify-content: start;
+    width: fit-content;
+  }
+  .header-menu {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .menu-list {
+    display: flex;
+    gap: 40px;
+  }
+  .address {
+    display: flex;
+    align-items: center;
+  }
+  .address-list {
+    display: flex;
+    gap: 40px;
+  }
   /**
    |============================
    | HERO - section1
