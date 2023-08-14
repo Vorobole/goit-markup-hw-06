@@ -76,6 +76,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 76px;
+  padding: 23px 0;
 }
 .logo-span {
   color: var(--navyblue, #2e2f42);
@@ -88,7 +89,6 @@ img {
   padding-bottom: 24px; */
 }
 .menu-mob-icon {
-  fill: transparent;
   stroke: #2e2f42;
 }
 .menu {
@@ -97,8 +97,6 @@ img {
 
   justify-content: space-between;
   width: 100%;
-
-  padding: 24px 0;
 }
 .menu-list {
   /* display: flex; */
@@ -107,7 +105,7 @@ img {
 
   gap: 40px;
 }
-.menu-link {
+/* .menu-link {
   color: var(--navyblue);
   font-family: Roboto;
   font-size: 16px;
@@ -120,8 +118,8 @@ img {
   padding: 24px 0;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-link::after {
+} */
+/* .menu-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -131,9 +129,9 @@ img {
   background-color: #404bbf;
   border-radius: 2px;
   opacity: 0;
-}
+} */
 
-.menu-link:hover::after {
+/* .menu-link:hover::after {
   opacity: 1;
 }
 .menu-link.active::after {
@@ -144,7 +142,7 @@ img {
 }
 .menu-link:focus {
   color: var(--ocean, #404bbf);
-}
+} */
 .address-list {
   /* display: flex; */
 
@@ -155,10 +153,13 @@ img {
 .address-link {
   color: var(--slate, #434455);
   font-family: Roboto;
-  font-size: 16px;
+  /* font-size: 16px; */
+
+  font-size: 12px;
+
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
   padding: 24px 0;
@@ -175,9 +176,16 @@ img {
 .menu-mob {
   position: fixed;
   top: 0;
-  z-index: 20;
+  left: 0;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: scroll;
+}
+.menu-mob-window {
+  width: 100vw;
   min-width: 320px;
   padding: 24px 24px 40px 40px;
   background: var(--white, #fff);
@@ -190,7 +198,6 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .menu-mob-btn-close {
   /* position: absolute; */
   /* top: 24px; */
@@ -203,7 +210,7 @@ img {
   justify-content: center;
   margin-left: auto;
   margin-bottom: 32px;
-  background-color: #e7e9fc;
+  background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   cursor: pointer;
@@ -225,7 +232,9 @@ img {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-.active {
+
+.menu-mob-link.active {
+  color: #4d5ae5;
 }
 .menu-mob-address {
 }
@@ -237,7 +246,7 @@ img {
 
 .menu-mob-address-tel {
   color: var(--iris, #4d5ae5);
-  font-size: 36px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.11;
@@ -255,7 +264,10 @@ img {
 }
 .menu-mob-icon-list {
   display: flex;
-  gap: 56px;
+  /* gap: 56px; */
+
+  gap: 30px;
+
   margin-top: 48px;
 }
 
@@ -863,6 +875,7 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: scroll;
 }
 .is-hidden {
   opacity: 0;
@@ -871,12 +884,14 @@ img {
 }
 .window {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   /* width: 408px; */
 
-  width: 392px;
+  top: 20px;
+  /* width: 392px; */
+  width: 100vw;
 
   min-height: 584px;
   background: #fcfcfc;
@@ -1050,6 +1065,16 @@ textarea:focus {
 }
 
 @media screen and (min-width: 428px) {
+  /* ----------------------------------Modal-Window------------------------------ */
+  .window {
+    width: 392px;
+  }
+  .menu-mob-icon-list {
+    gap: 56px;
+  }
+  .menu-mob-address-tel {
+    font-size: 36px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1059,10 +1084,12 @@ textarea:focus {
    |============================
   */
   .header-menu {
-    gap: 40px;
+    gap: 100px;
+    align-items: center;
   }
   .logo {
     margin-right: 120px;
+    padding: 24px 0;
   }
 
   .menu-mob {
@@ -1074,9 +1101,6 @@ textarea:focus {
   .menu-list {
     display: flex;
   }
-  .address {
-    padding: 16px;
-  }
   .address-list {
     display: flex;
     flex-wrap: wrap;
@@ -1084,6 +1108,43 @@ textarea:focus {
   }
   .address-link {
     padding: 0;
+  }
+  .menu-link {
+    color: var(--navyblue);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    list-style: none;
+    text-decoration: none;
+    padding: 24px 0;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+    opacity: 0;
+  }
+  .menu-link:hover::after {
+    opacity: 1;
+  }
+  .menu-link.active::after {
+    opacity: 1;
+  }
+  .menu-link:hover {
+    color: var(--ocean, #404bbf);
+  }
+  .menu-link:focus {
+    color: var(--ocean, #404bbf);
   }
 
   /**
@@ -1103,7 +1164,7 @@ textarea:focus {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/background-hero-tab.jpg);
+      url(../images/background-hero.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -1114,7 +1175,7 @@ textarea:focus {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/background-hero-tab@2x.jpg);
+        url(../images/background-hero@2x.jpg);
     }
   }
 
@@ -1124,6 +1185,9 @@ textarea:focus {
    |============================
   */
 
+  .qualities .container {
+    max-width: 768px;
+  }
   .qualities-list {
     gap: 72px 24px;
   }
@@ -1146,6 +1210,9 @@ textarea:focus {
    | Team - section4
    |============================
   */
+  .team .container {
+    max-width: 584px;
+  }
 
   .team-list {
     display: flex;
@@ -1163,11 +1230,16 @@ textarea:focus {
    | Customers - section5
    |============================
   */
-
+  .customers .container {
+    max-width: 584px;
+  }
   .customers-item {
-    max-width: 168px;
-    height: 88px;
+    min-width: 168px;
+    min-height: 88px;
     width: calc((100% - 48px) / 3);
+  }
+  .customers-list {
+    gap: 72px 24px;
   }
 
   /**
@@ -1209,6 +1281,10 @@ textarea:focus {
    |============================
   */
 
+  .footer .container {
+    max-width: 584px;
+  }
+
   .footer-logo {
     margin-bottom: 16px;
     justify-content: start;
@@ -1225,16 +1301,16 @@ textarea:focus {
   .footer-left-socl {
     display: flex;
     gap: 24px;
-    margin-left: 108px;
+    /* margin-left: 108px; */
   }
 
   .footer-subscribe-title {
     text-align: start;
-    margin-left: 108px;
+    /* margin-left: 108px; */
   }
   .footer-subscribe-form {
     display: flex;
-    margin-left: 108px;
+    /* margin-left: 108px; */
     gap: 16px;
   }
   .footer-subscribe-email {
@@ -1243,8 +1319,6 @@ textarea:focus {
 
   .footer-input-email {
     width: 264px;
-
-    margin-bottom: 16px;
   }
   .footer-subscribe-btn {
     margin: 0;
@@ -1295,7 +1369,7 @@ textarea:focus {
   */
 
   .container {
-    max-width: 1158px;
+    max-width: 1160px;
     width: 100%;
   }
 
@@ -1332,7 +1406,9 @@ textarea:focus {
    | Qualities - section2
    |============================
   */
-
+  .qualities .container {
+    max-width: 1160px;
+  }
   .qualities {
     padding: 120px 0;
   }
@@ -1404,6 +1480,11 @@ textarea:focus {
    | Team - section4
    |============================
   */
+
+  .team .container {
+    max-width: 1160px;
+  }
+
   .team {
     padding: 120px 0;
   }
@@ -1472,6 +1553,11 @@ textarea:focus {
   }
 
   /* ---------------------------------footer------------------------------- */
+
+  .footer .container {
+    max-width: 1160px;
+  }
+
   .footer-logo {
     color: var(--iris, #4d5ae5);
     font-family: "Raleway", sans-serif;
@@ -1508,14 +1594,15 @@ textarea:focus {
   .footer-icon-list {
     display: flex;
     gap: 16px;
+    margin-bottom: 0;
   }
 
   .footer-subscribe-title {
-    margin-left: 80px;
+    margin-left: 0;
   }
   .footer-subscribe-form {
-    margin-left: 80px;
     gap: 24px;
+    margin-left: 0;
   }
 
   .footer-input-email {
@@ -1524,6 +1611,7 @@ textarea:focus {
 
   .footer-left-socl {
     margin: 0;
+    margin-right: 80px;
     gap: 0;
   }
 
