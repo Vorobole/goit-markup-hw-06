@@ -186,7 +186,7 @@ img {
 }
 .menu-mob-window {
   width: 100vw;
-  min-width: 320px;
+  /* min-width: 320px; */
   padding: 24px 24px 40px 40px;
   background: var(--white, #fff);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
@@ -812,7 +812,7 @@ img {
 
   /* margin-left: 80px; */
   /* width: 453px; */
-  height: 80px;
+  /* height: 80px; */
   /* gap: 24px; */
 }
 
@@ -1154,7 +1154,7 @@ textarea:focus {
   */
 
   .container {
-    max-width: 738px;
+    max-width: 736px;
   }
 
   .hero {
@@ -1319,6 +1319,7 @@ textarea:focus {
 
   .footer-input-email {
     width: 264px;
+    margin-bottom: 0;
   }
   .footer-subscribe-btn {
     margin: 0;
@@ -1361,6 +1362,9 @@ textarea:focus {
   .address-list {
     display: flex;
     gap: 40px;
+  }
+  .address-link {
+    font-size: 16px;
   }
   /**
    |============================
