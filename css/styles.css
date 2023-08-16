@@ -1166,7 +1166,9 @@ textarea:focus {
    | Header
    |============================
   */
-
+  .logo {
+    margin-right: 76px;
+  }
   .menu {
     justify-content: start;
     width: fit-content;
